@@ -110,6 +110,7 @@ npm run serve
 虽然刚开始，不过已经发现了更新很大，视频中的版本使用`React.createClass()`创建React模块，在自己项目`Main.js`中使用的是继承`extends React.Component`, 搜索了一下两者的区别，当然你也是需要了解一下的，后者全文是使用ES6规范写的代码等。
 参考React.createClass versus extends React.Component[https://toddmotto.com/react-create-class-versus-component/]，或百度
 
+
 视频中运行了`grunt build`，但我们用以下替代：
 
     ``
