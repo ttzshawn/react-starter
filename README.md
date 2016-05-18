@@ -76,6 +76,7 @@ npm install -g generator-react-webpack
 ``
 yo react-webpack
 ``
+
     - React-router -- no
     - Architectures -- no
     - Styles language --SCSS
