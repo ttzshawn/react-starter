@@ -119,7 +119,8 @@ npm run serve
     npm run dist
     ``
 
-
+# 第三天
+(今日无啥更新，看完了篇文章[JavaScript 原型系统的变迁，以及 ES6 class](https://segmentfault.com/a/1190000003798438)， 多了解了下JS的原型链和类，尤其是ES6标准的class和extends等，在大部分新代码中，应该是主要以ES6为标准了。另外看了视频中的Webpack部分，不好懂，不过这种应该直接用，逐步了解，用着用着就会熟悉然后理解的)
 
 
 
