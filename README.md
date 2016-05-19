@@ -120,7 +120,25 @@ npm run serve
     ``
 
 # 第三天
-(今日无啥更新，看完了篇文章[JavaScript 原型系统的变迁，以及 ES6 class](https://segmentfault.com/a/1190000003798438)， 多了解了下JS的原型链和类，尤其是ES6标准的class和extends等，在大部分新代码中，应该是主要以ES6为标准了。另外看了视频中的Webpack部分，不好懂，不过这种应该直接用，逐步了解，用着用着就会熟悉然后理解的)
+（今日无啥更新，看完了篇文章[JavaScript 原型系统的变迁，以及 ES6 class](https://segmentfault.com/a/1190000003798438)， 多了解了下JS的原型链和类，尤其是ES6标准的class和extends等，在大部分新代码中，应该是主要以ES6为标准了。另外看了视频中的Webpack部分，不好懂，不过这种应该直接用，逐步了解，用着用着就会熟悉然后理解的）
+
+# 第四天
+视频[3-1 舞台构建](http://www.imooc.com/video/9885)首先提到要装和配置`autoprefixer-loader`，视频中间部分又需要装`json-loader`
+
+我觉得有点不好理解，这里问题出现在不理解Webpakc的loader，遂查询相关信息和资料: [Webpack中文指南-loader](http://zhaoda.net/webpack-handbook/loader.html)，此处解释的还可以，需要看完，当然此文档其他内容也顺便翻阅了一下。
+
+现在马上清晰了很多
+
+> * Webpack 本身只能处理 JavaScript 模块，如果要处理其他类型的文件，就需要使用 loader 进行转换。
+> * Loader 可以理解为是模块和资源的转换器，它本身是一个函数，接受源文件作为参数，返回转换的结果。这样，我们就可以通过 require 来加载任何类型的模块或文件，比如 CoffeeScript、 JSX、 LESS 或图片。
+
+按照视频添加`data`、`imageDatas.json`、图片等
+
+（发现了几个网站，去codeschool看了[powering-up-with-react - Level1教程](http://campus.codeschool.com/courses/powering-up-with-react/contents)，非常，非常清晰明了，有些单词不懂，0.75倍速+开翻译做完了，后面的要钱就没继续，不过感叹课程实在是很棒，你也去试试）
+
+倒回来看这个imooc的视频，好烦。。今天先这样吧
+
+
 
 
 
