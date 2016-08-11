@@ -1,21 +1,22 @@
 # React-Starter
-React.js starter. Built with Node, SASS, Webpack and stuff.
-
-# Tutorial Page (教程地址)
-## http://
+快速了解React以及Webpack, Node等相关技术工具
 
 # 第一天 
 ## 1.1 开始
+1. 安装Nodejs（以下软件如无说明，都是去官网，安装最新版）, 了解npm
+    ``
+    $ node -v
+    $ npm -v
+    `` 
+2. 安装编辑器（Visual Studio Code或Sublime）
+3. 创建项目目录，使用npm初始化
+    ``
+    $ npm init
+    ``
+
 正常来说，按照视频一步一步是可以做下来这个项目并且能够基本熟悉React的，但是开源的大部分东西都更新的非常快，你现在装的很多东西可能已经不是最新的了，会和视频不一样甚至可能做不出来。所以这里写的是我自己按照这个视频，再加上一些自己的理解和最新的开源资源来记录一路走过的步骤。
 
 React在imooc上的教程有三部分，你可以先看看视频大概的`目录`，接下来我做到什么地方就会提前说一下需要看视频的哪些部分:
-
-第一 [React入门](http://www.imooc.com/learn/504)
-
-第二 [React实战--打造画廊应用（上）](http://www.imooc.com/learn/507)
-
-第三 [React实践图片画廊应用（下）](http://www.imooc.com/learn/652)
-
 
 ## 1.2 更新
 可能我更新不一定快，不过我会尽量有空就去学，然后去更新。
