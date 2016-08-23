@@ -3,7 +3,7 @@ let path = require('path');
 let webpack = require('webpack');
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/index.js',
   output: { path: __dirname + '/src', filename: 'bundle.js' },
   module: {
     loaders: [
@@ -14,6 +14,10 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      },
+      {
+        test: /\.scss/,
+        loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded'
       }
     ]
   },
