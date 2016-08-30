@@ -137,8 +137,6 @@ npm run serve
 
 （发现了几个网站，去codeschool看了[powering-up-with-react - Level1教程](http://campus.codeschool.com/courses/powering-up-with-react/contents)，非常，非常清晰明了，有些单词不懂，0.75倍速+开翻译做完了，后面的要钱就没继续，不过感叹课程实在是很棒，你也去试试）
 
-倒回来看这个imooc的视频，好烦。。今天先这样吧
-
 
 
 
