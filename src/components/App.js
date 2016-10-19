@@ -1,13 +1,15 @@
 import React from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import MyAwesomeReactComponent from './MyAwesomeReactComponent'
+import Header from './header'
+import TodoContainer from './TodoContainer'
+import './style.scss'
 
 const App = () => (
     <div>
         <MuiThemeProvider>
-            <MyAwesomeReactComponent />
+            <Header />
         </MuiThemeProvider>
-        <div>test</div>
+        <TodoContainer></TodoContainer>
     </div>
 )
 

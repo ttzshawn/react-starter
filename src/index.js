@@ -1,7 +1,6 @@
 import { AppContainer } from 'react-hot-loader';
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './components/style.scss'
 
 import App from './components/App'
 import injectTapEventPlugin from 'react-tap-event-plugin'
@@ -11,7 +10,6 @@ injectTapEventPlugin()
 ReactDOM.render(
   <div>
     <App />
-    <h1 className="title">Hello Worfweld13</h1>
   </div>,
   document.getElementById('main')
 )
