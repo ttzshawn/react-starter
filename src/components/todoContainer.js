@@ -5,6 +5,7 @@ import IconButton from 'material-ui/IconButton';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
+import RaisedButton from 'material-ui/RaisedButton'
 
 export default class TodoContainer extends React.Component {
   constructor(props) {
@@ -34,9 +35,10 @@ export default class TodoContainer extends React.Component {
 
     Logged.muiName = 'IconMenu';
     return (
-      <MuiThemeProvider>
+      <div>
         <AppBar iconElementRight={<Logged />} />
-      </MuiThemeProvider>
+        <RaisedButton label="Default" />
+      </div>
     )
   }
 }
