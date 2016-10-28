@@ -7,12 +7,12 @@ import './style.scss'
 export default class App extends React.Component {
   constructor(props) {
     super(props)
+    this.toggleDrawer = this.toggleDrawer.bind(this)
     this.state = { drawerStatus: false }
   }
 
   toggleDrawer() {
-    console.log(1)
-    // this.setState({ drawerStatus: !this.state.drawerStatus })
+    this.setState({ drawerStatus: !this.state.drawerStatus })
   }
 
   render() {

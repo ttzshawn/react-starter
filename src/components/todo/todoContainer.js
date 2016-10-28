@@ -21,7 +21,7 @@ export default class TodoContainer extends React.Component {
       <IconMenu
         {...props}
         iconButtonElement={
-          <IconButton onTouchTap={this.props.toggleDrawer}><MoreVertIcon /></IconButton>
+          <IconButton ><MoreVertIcon /></IconButton>
         }
         targetOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
@@ -35,7 +35,7 @@ export default class TodoContainer extends React.Component {
     Logged.muiName = 'IconMenu'
     return (
       <div>
-        <AppBar iconElementRight={<Logged />} />
+        <AppBar onTouchTap={this.props.toggleDrawer} iconElementRight={<Logged />} />
         <RaisedButton label="Default" />
       </div>
     )
