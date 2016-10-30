@@ -32,9 +32,10 @@ export default class DrawerUndockedExample extends React.Component {
         open={this.state.open}
         onRequestChange={(open) => this.setState({ open })}
         >
-        <AppBar title="AppBar" />
-        <MenuItem onTouchTap={this.handleClose}>Menu Item</MenuItem>
-        <MenuItem onTouchTap={this.handleClose}>Menu Item 2</MenuItem>
+        <AppBar title="Me"
+                showMenuIconButton={false} />
+        <MenuItem onTouchTap={this.handleClose}>Todo List</MenuItem>
+        <MenuItem onTouchTap={this.handleClose}>Doc</MenuItem>
       </Drawer>
     )
   }
