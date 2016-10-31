@@ -19,7 +19,7 @@ const PaperExampleSimple = () => (
     <Paper style={style} zDepth={2}>
       <div className="todo-panel-container">
         <TextField
-          hintText="Hint Text"
+          hintText="Please type your plan here"
           />
         <RaisedButton label="Add" className="todo-input" />
       </div>
