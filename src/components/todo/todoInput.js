@@ -1,7 +1,9 @@
 import React from 'react'
 import Paper from 'material-ui/Paper'
 import TextField from 'material-ui/TextField'
+import RaisedButton from 'material-ui/RaisedButton'
 import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from 'material-ui/Table'
+import './todo.scss'
 
 const style = {
   height: '800px',
@@ -15,10 +17,12 @@ const style = {
 const PaperExampleSimple = () => (
   <div>
     <Paper style={style} zDepth={2}>
-      <TextField
-        hintText="Hint Text"
-        />
-
+      <div className="todo-panel-container">
+        <TextField
+          hintText="Hint Text"
+          />
+        <RaisedButton label="Add" className="todo-input" />
+      </div>
       <Table>
         <TableHeader>
           <TableRow>

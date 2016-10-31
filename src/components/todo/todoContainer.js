@@ -34,10 +34,12 @@ export default class TodoContainer extends React.Component {
     Logged.muiName = 'IconMenu'
     return (
       <div>
-        <AppBar onLeftIconButtonTouchTap={this.props.toggleDrawer}
+        <AppBar className="todo-container" onLeftIconButtonTouchTap={this.props.toggleDrawer}
                 title='Todoer'
                 iconElementRight={<Logged />} />
-        <TodoInput />
+        <div>
+          <TodoInput />
+        </div>
       </div>
     )
   }
