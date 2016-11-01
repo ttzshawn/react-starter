@@ -1,12 +1,14 @@
 import React from 'react'
+import Paper from 'material-ui/Paper'
 import AppBar from 'material-ui/AppBar'
 import IconButton from 'material-ui/IconButton'
 import IconMenu from 'material-ui/IconMenu'
 import MenuItem from 'material-ui/MenuItem'
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert'
 import TodoInput from './todoInput'
+import TodoList from './todoList'
 
-export default class TodoContainer extends React.Component {
+export default class Container extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -16,6 +18,14 @@ export default class TodoContainer extends React.Component {
   }
 
   render() {
+    const style = {
+      height: '800px',
+      width: '90%',
+      margin: '20px auto',
+      textAlign: 'center',
+      display: 'block',
+      position: 'relative'
+    }
     const Logged = (props) => (
       <IconMenu
         {...props}
@@ -35,10 +45,13 @@ export default class TodoContainer extends React.Component {
     return (
       <div>
         <AppBar className="todo-container" onLeftIconButtonTouchTap={this.props.toggleDrawer}
-                title='Todoer'
-                iconElementRight={<Logged />} />
+          title='Todoer'
+          iconElementRight={<Logged />} />
         <div>
-          <TodoInput />
+          <Paper style={style} zDepth={2}>
+            <TodoInput />
+            <TodoList />
+          </Paper>
         </div>
       </div>
     )

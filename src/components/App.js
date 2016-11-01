@@ -1,6 +1,6 @@
 import React from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import TodoContainer from './todo/TodoContainer'
+import Container from './todo/container'
 import DrawerContaiiner from './drawer/drawerContainer.js'
 import './style.scss'
 
@@ -21,7 +21,7 @@ export default class App extends React.Component {
         <MuiThemeProvider>
           <div>
             <DrawerContaiiner drawerStatus={this.state.drawerStatus}></DrawerContaiiner>
-            <TodoContainer toggleDrawer={this.toggleDrawer}></TodoContainer>
+            <Container toggleDrawer={this.toggleDrawer}></Container>
           </div>
         </MuiThemeProvider>
       </div>
