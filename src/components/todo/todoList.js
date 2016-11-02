@@ -25,7 +25,6 @@ export default class TodoList extends React.Component {
     }
   }
 
-
   _addTodoItem(d) {
     this.setState({
       list: this.state.list.concat(
