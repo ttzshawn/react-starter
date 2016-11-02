@@ -28,7 +28,7 @@ export default class DrawerUndockedExample extends React.Component {
     return (
       <Drawer
         docked={false}
-        width={200}
+        width={300}
         open={this.state.open}
         onRequestChange={(open) => this.setState({ open })}
         >

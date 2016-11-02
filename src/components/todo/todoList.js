@@ -4,23 +4,40 @@ import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowCol
 export default class TodoList extends React.Component {
   constructor(props) {
     super(props)
+    this._getTodoList = this._getTodoList.bind(this)
+    this._addTodoItem = this._addTodoItem.bind(this)
+    this.state = {
+      list: [
+        { id: 1, name: 'Shawn', status: 'Employed' },
+        { id: 2, name: 'AShawn', status: 'Employed' },
+        { id: 3, name: 'AAShawn', status: 'Employed' }
+      ]
+    }
   }
 
   componentDidMount() {
 
   }
 
-  _getTodoList() {
-    const data = [
-      { id: 1, name: 'Shawn', status: 'Employed' },
-      { id: 2, name: 'AShawn', status: 'Employed' },
-      { id: 3, name: 'AAShawn', status: 'Employed' }
-    ]
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.newItem) {
+      this._addTodoItem(nextProps.newItem)
+    }
+  }
 
-    return data.map((d) => {
+
+  _addTodoItem(d) {
+    this.setState({
+      list: this.state.list.concat(
+        { id: 1, name: d, status: 'Employed' }
+      )
+    })
+  }
+
+  _getTodoList() {
+    return this.state.list.map((d, index) => {
       return (
-        <TableRow key={d.id}>
-          <TableHeaderColumn>{d.id}</TableHeaderColumn>
+        <TableRow key={index}>
           <TableHeaderColumn>{d.name}</TableHeaderColumn>
           <TableHeaderColumn>{d.status}</TableHeaderColumn>
         </TableRow>
@@ -29,20 +46,19 @@ export default class TodoList extends React.Component {
   }
 
   render() {
-    let listTable = this._getTodoList()
+    let list = this._getTodoList()
 
     return (
       <div>
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHeaderColumn>ID</TableHeaderColumn>
               <TableHeaderColumn>Name</TableHeaderColumn>
               <TableHeaderColumn>Status</TableHeaderColumn>
             </TableRow>
           </TableHeader>
           <TableBody>
-            {listTable}
+            {list}
           </TableBody>
         </Table>
       </div>
