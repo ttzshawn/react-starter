@@ -11,21 +11,22 @@ import TodoList from './todoList'
 export default class Container extends React.Component {
   constructor(props) {
     super(props)
+
+    this._setNewItem = this._setNewItem.bind(this)
+    this.state = { newItem: '' }
   }
 
   componentDidMount() {
 
   }
 
-  render() {
-    const style = {
-      height: '800px',
-      width: '90%',
-      margin: '20px auto',
-      textAlign: 'center',
-      display: 'block',
-      position: 'relative'
+  _setNewItem(d) {
+    if (d != null && d != undefined && d != '') {
+      this.setState({ newItem: d })
     }
+  }
+
+  render() {
     const Logged = (props) => (
       <IconMenu
         {...props}
@@ -44,13 +45,15 @@ export default class Container extends React.Component {
     Logged.muiName = 'IconMenu'
     return (
       <div>
-        <AppBar className="todo-container" onLeftIconButtonTouchTap={this.props.toggleDrawer}
+        <AppBar
+          className="todo-container"
+          onLeftIconButtonTouchTap={this.props.toggleDrawer}
           title='Todoer'
           iconElementRight={<Logged />} />
         <div>
-          <Paper style={style} zDepth={2}>
-            <TodoInput />
-            <TodoList />
+          <Paper className='todo-paper' zDepth={2}>
+            <TodoInput setNewItem={this._setNewItem} />
+            <TodoList newItem={this.state.newItem} />
           </Paper>
         </div>
       </div>

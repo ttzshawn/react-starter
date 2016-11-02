@@ -20,7 +20,7 @@ export default class PaperExampleSimple extends React.Component {
   }
 
   _handleAdd() {
-    alert(this.state.inputValue)
+    this.props.setNewItem(this.state.inputValue)
   }
 
   render() {
