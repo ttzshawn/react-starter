@@ -20,13 +20,14 @@ export default class PaperExampleSimple extends React.Component {
 
   _handleAdd() {
     this.props.setNewItem(this.state.inputValue)
+    this.setState({inputValue: ''})
   }
 
   render() {
     return (
       <div className="todo-panel-container">
         <TextField onChange={this._handleChange} value={this.state.inputValue} hintText="Please type your plan here" />
-        <RaisedButton label="Add" onTouchTap={this._handleAdd} primary={true} className="todo-input" />
+        <RaisedButton label="Add" onTouchTap={this._handleAdd} primary={true} disabled={!this.state.inputValue} className="todo-input" />
       </div>
     )
   }
