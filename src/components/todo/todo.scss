@@ -5,6 +5,13 @@
   text-align: center;
   display: block;
   position: relative;
+  table {
+    tbody {
+      tr {
+        cursor: pointer;
+      }
+    }
+  }
 }
 .todo-panel-container {
   padding-top: 30px;

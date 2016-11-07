@@ -1,4 +1,5 @@
 import React from 'react'
+import RaisedButton from 'material-ui/RaisedButton'
 import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from 'material-ui/Table'
 
 export default class TodoList extends React.Component {
@@ -6,6 +7,7 @@ export default class TodoList extends React.Component {
     super(props)
     this._getTodoList = this._getTodoList.bind(this)
     this._addTodoItem = this._addTodoItem.bind(this)
+    this._removeTodoItem = this._removeTodoItem.bind(this)
     this.state = {
       list: [
         { id: 1, name: 'Shawn', status: 'Employed' },
@@ -33,12 +35,18 @@ export default class TodoList extends React.Component {
     })
   }
 
+  _removeTodoItem() {
+  }
+
   _getTodoList() {
     return this.state.list.map((d, index) => {
       return (
         <TableRow key={index}>
           <TableHeaderColumn>{d.name}</TableHeaderColumn>
           <TableHeaderColumn>{d.status}</TableHeaderColumn>
+          <TableHeaderColumn>
+            <RaisedButton label="Remove" onTouchTap={this._removeToddoItem} secondary={true} />
+          </TableHeaderColumn>
         </TableRow>
       )
     })
@@ -54,6 +62,7 @@ export default class TodoList extends React.Component {
             <TableRow>
               <TableHeaderColumn>Name</TableHeaderColumn>
               <TableHeaderColumn>Status</TableHeaderColumn>
+              <TableHeaderColumn></TableHeaderColumn>
             </TableRow>
           </TableHeader>
           <TableBody>
